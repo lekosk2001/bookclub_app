@@ -1,0 +1,42 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React from "react";
+import * as S from "./Layout_style";
+
+type Props = {
+    children: JSX.Element;
+};
+
+const Layout = (props: Props) => {
+    const router = useRouter();
+
+    return (<>
+        <S.Main>
+            <S.Header>
+                <S.Logo onClick={() => { router.push(`/`) }}>
+                    📔북클럽
+                </S.Logo>
+                <S.User>
+                    <S.UserAvatar />
+                    <S.UserName>이경석 님</S.UserName>
+                    <S.UserCaretDown />
+                </S.User>
+            </S.Header>
+            <S.Mid>
+                <S.Aside>
+                    <S.Nav>
+                        <Link href={"/boards"}><S.NavItem>독서모임</S.NavItem></Link>
+                        <Link href={"/market"}><S.NavItem>중고장터</S.NavItem></Link>
+                        <Link href={"/mypage"}><S.NavItem>내 정보</S.NavItem></Link>
+                    </S.Nav>
+                </S.Aside>
+                <S.Contents>{props.children}</S.Contents>
+            </S.Mid>
+
+        </S.Main>
+        <S.Footer>푸터</S.Footer>
+    </>)
+
+};
+
+export default Layout;

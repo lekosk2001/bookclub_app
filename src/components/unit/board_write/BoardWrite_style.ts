@@ -7,22 +7,6 @@ export const Form = styled.form`
     gap: 20px;
 `
 
-export const Title = styled.h1`
-    font-size: 30px;
-`
-
-export const FormHeader = styled.div`
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    gap: 10px;
-`
-
-export const ButtonWrapper = styled.div`
-    display: flex;
-    gap: 10px;
-`
-
 export const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -30,9 +14,11 @@ export const InputContainer = styled.div`
 `
 
 export const InputTwo = styled.div`
+    padding: 15px;
     width: 100%;
     display: flex;
-    gap: 20px;
+    gap:15px;
+    background-color: #f4f6fa;
 `
 
 
@@ -52,21 +38,31 @@ export const InputLabel = styled.label`
 `
 
 
-export const InputStyled = styled(Input)`
-height: 40px;
+export const TextAreaStyled = styled.textarea`
+    height: 300px;
+    border: 0px;
+    padding: 10px;
+    border-radius :0px;
+    background-color: #f4f6fa;
 `
 
-export const InputTitle = styled(Input)`
+
+export const InputStyled = styled.input`
+    height: 40px;    
+    border: 0px;
+    padding: 0px 10px;
+`
+
+export const InputTitle = styled.input`
     font-size: 36px;
     font-weight: 800;
     padding: 0px;
     border: 0px;
     border-bottom: 1px solid #dae1e6;
     border-radius: 0px;
-    &:focus{
-        border: 0px;
-    }
 `
+
+
 
 
 

@@ -1,30 +1,70 @@
 import styled from "@emotion/styled";
-import { CaretDownOutlined } from "@ant-design/icons";
+import { CaretDownOutlined, ReadFilled, SettingFilled, ShoppingFilled } from "@ant-design/icons";
 
 export const Main = styled.main`
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
 `
 export const Aside = styled.aside`
     display: flex;
     flex-direction: column;
     border-right:1px solid #dae1e6;
     width: 100%;
-    max-width: 200px;
-    padding: 20px 20px 0px 0px;    
+    max-width: 240px;
+    padding: 20px 10px;
     gap: 20px;
 `
 
 export const Nav = styled.nav`
     display: flex;
+    gap: 10px;
     flex-direction: column;
 
 `
 
+
+export const SettingFilledStyled = styled(SettingFilled)`
+    background-color: gray;
+    font-size: 15px;    
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #fff; 
+`
+
+export const ReadFilledStyled = styled(ReadFilled)`
+    background-color: gray;
+    font-size: 15px;    
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #fff; 
+`
+
+export const ShoppingFilledStyled = styled(ShoppingFilled)`
+    background-color: gray;
+    width: 24px;
+    height: 24px;
+    font-size: 15px;
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+`
+
 export const NavItem = styled.h5`
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     height: 40px;
     padding: 0px 10px;
     display: flex;
@@ -34,17 +74,16 @@ export const NavItem = styled.h5`
     }
 `
 
-
 export const Mid = styled.div`
     display: flex;
-    padding: 0px 20px;
 `
 
-
-export const Contents = styled.div`    
+export const Contents = styled.div`
     width: 100%;
     padding:20px;
-    padding-right: 0px;
+    margin: 0px auto;
+    max-width: 860px;
+    min-height: 50vh;
 `
 
 export const Header = styled.header`

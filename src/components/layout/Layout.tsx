@@ -1,3 +1,4 @@
+import { BarsOutlined, ReadFilled, SettingFilled, ShoppingFilled } from "@ant-design/icons";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -25,9 +26,9 @@ const Layout = (props: Props) => {
             <S.Mid>
                 <S.Aside>
                     <S.Nav>
-                        <Link href={"/boards"}><S.NavItem>독서모임</S.NavItem></Link>
-                        <Link href={"/market"}><S.NavItem>중고장터</S.NavItem></Link>
-                        <Link href={"/mypage"}><S.NavItem>내 정보</S.NavItem></Link>
+                        <Link href={"/boards"}><S.NavItem><S.ReadFilledStyled /> 독서모임</S.NavItem></Link>
+                        <Link href={"/market"}><S.NavItem><S.ShoppingFilledStyled />중고장터</S.NavItem></Link>
+                        <Link href={"/mypage"}><S.NavItem><S.SettingFilledStyled />내 정보</S.NavItem></Link>
                     </S.Nav>
                 </S.Aside>
                 <S.Contents>{props.children}</S.Contents>

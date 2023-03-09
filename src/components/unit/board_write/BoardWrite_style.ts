@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { Input } from 'antd';
 
 export const Form = styled.form`
     display: flex;

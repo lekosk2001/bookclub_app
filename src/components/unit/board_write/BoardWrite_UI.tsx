@@ -38,7 +38,7 @@ const BoardWrite_UI = (props: Props) => {
     return (
         <S.Form onSubmit={handleSubmit(onSubmit)}>
             <ContentsHeader>
-                <Title>독서모임 생성</Title>
+                <Title>자유토론 글쓰기</Title>
                 <ButtonWrapper>
                     <Button danger onClick={() => { router.push(`/boards`) }}>취소</Button>
                     <Button onClick={handleSubmit(onSubmit)}>작성</Button>

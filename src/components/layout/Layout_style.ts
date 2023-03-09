@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
-import { CaretDownOutlined, ReadFilled, SettingFilled, ShoppingFilled } from "@ant-design/icons";
+import { CaretDownOutlined, MehFilled, ReadFilled, SettingFilled, ShoppingFilled } from "@ant-design/icons";
 
 export const Main = styled.main`
     display: flex;
     flex-direction: column;
+    height: 100%;
 `
 export const Aside = styled.aside`
     display: flex;
@@ -11,8 +12,15 @@ export const Aside = styled.aside`
     border-right:1px solid #dae1e6;
     width: 100%;
     max-width: 240px;
-    padding: 20px 10px;
+    padding: 20px;
+    padding-top: 30px;
     gap: 20px;
+    z-index: 1;
+`
+
+export const Article = styled.article`
+    width: 100%;
+    max-width: 200px;
 `
 
 export const Nav = styled.nav`
@@ -26,8 +34,8 @@ export const Nav = styled.nav`
 export const SettingFilledStyled = styled(SettingFilled)`
     background-color: gray;
     font-size: 15px;    
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,8 +46,8 @@ export const SettingFilledStyled = styled(SettingFilled)`
 export const ReadFilledStyled = styled(ReadFilled)`
     background-color: gray;
     font-size: 15px;    
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,8 +57,8 @@ export const ReadFilledStyled = styled(ReadFilled)`
 
 export const ShoppingFilledStyled = styled(ShoppingFilled)`
     background-color: gray;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     font-size: 15px;
     color: #fff; 
     display: flex;
@@ -62,28 +70,31 @@ export const ShoppingFilledStyled = styled(ShoppingFilled)`
 export const NavItem = styled.h5`
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-weight: 400;
+    gap: 17px;
+    font-weight: 600;
     font-size: 15px;
     height: 40px;
     padding: 0px 10px;
     display: flex;
     align-items: center;
+    color: gray;
     &:hover{
-        background-color: #f4f6fa;
+        background-color: #f7f9fa;
     }
 `
 
 export const Mid = styled.div`
     display: flex;
+    height: 100%;
 `
 
-export const Contents = styled.div`
+export const Contents = styled.section`
     width: 100%;
-    padding:20px;
+    padding:40px;
+    min-height: 50vh;    
+    max-width: 900px;
     margin: 0px auto;
-    max-width: 860px;
-    min-height: 50vh;
+    /* background-color: #f4f6fa; */
 `
 
 export const Header = styled.header`
@@ -93,7 +104,9 @@ export const Header = styled.header`
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #dae1e6;
-    padding: 0px 20px;
+    padding: 0px 20px;    
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+    z-index: 2;
 `
 
 
@@ -112,16 +125,21 @@ export const User = styled.div`
     
 `
 
-export const UserAvatar = styled.div`
+export const UserAvatar = styled(MehFilled)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 30px;
+    font-size: 20px;
+    color: #fff;
     background-color: gray;
     border-radius: 20px;
 `
 
 
 export const UserName = styled.p`
-    font-size: 15px;
+    font-size: 13px;
 `
 
 

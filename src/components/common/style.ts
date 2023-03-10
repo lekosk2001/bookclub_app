@@ -1,7 +1,8 @@
 import styled from "@emotion/styled"
 
 export const Title = styled.h1`
-    font-size: 36px;
+    font-size: 48px;
+    letter-spacing: -1px;
 `
 
 export const ContentsHeader = styled.section`

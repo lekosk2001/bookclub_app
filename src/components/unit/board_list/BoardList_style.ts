@@ -1,14 +1,10 @@
 import styled from "@emotion/styled";
 
-
-
 export const ListContainer = styled.div`
     display: flex;
     flex-direction: column;    
     border-bottom: 1px solid #dae1e6;
 `
-
-
 
 export const Tabs = styled.div`
     gap: 10px;
@@ -24,19 +20,17 @@ export const Tabs = styled.div`
 
 export const Row = styled.div`
     cursor: pointer;
-    gap: 10px;
+    gap: 15px;
     display: flex;
-    height: 40px;
+    height: 50px;
     border-top: 1px solid #dae1e6;
     justify-content: space-between;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     padding: 0px 20px;    
     background-color: #fff;
         &:hover{
-            span{
-                text-decoration: underline;
-            }
+            background-color:#E8F0FE;
     }
 `
 
@@ -63,7 +57,7 @@ export const Column = styled.span`
 	}
 	&:nth-of-type(4) {		
 		display: flex;
-        width: 100px;
+        width: 50px;
 	}
 `
 
@@ -78,22 +72,22 @@ export const Tab = styled.span`
     &:nth-of-type(1) {
 		display: flex;
         width: 100%;
-        font-weight: 800;
+        font-weight: 500;
 	}
-	&:nth-of-type(2) {        
+	&:nth-of-type(2) {
 		display: flex;
-        width: 150px;        
-        justify-content: flex-start;        
-        font-weight: 800;
+        width: 150px;
+        justify-content: flex-start;
+        font-weight: 500;
 	}
 	&:nth-of-type(3) {		
 		display: flex;
         width: 100px;        
-        font-weight: 800;
+        font-weight: 500;
 	}
 	&:nth-of-type(4) {		
 		display: flex;
-        width: 100px;        
-        font-weight: 800;
+        width: 50px;        
+        font-weight: 500;
 	}
 `

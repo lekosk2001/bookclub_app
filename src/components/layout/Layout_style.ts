@@ -10,8 +10,8 @@ export const Aside = styled.aside`
     display: flex;
     flex-direction: column;
     border-right:1px solid #dae1e6;
-    width: 100%;
     max-width: 240px;
+    min-width: 240px;
     padding: 20px;
     padding-top: 30px;
     gap: 20px;
@@ -25,14 +25,14 @@ export const Article = styled.article`
 
 export const Nav = styled.nav`
     display: flex;
-    gap: 10px;
+    gap: 5px;
     flex-direction: column;
 
 `
 
 
 export const SettingFilledStyled = styled(SettingFilled)`
-    background-color: gray;
+    background-color: #808080;
     font-size: 15px;    
     width: 30px;
     height: 30px;
@@ -44,7 +44,7 @@ export const SettingFilledStyled = styled(SettingFilled)`
 `
 
 export const ReadFilledStyled = styled(ReadFilled)`
-    background-color: gray;
+    background-color: #808080;
     font-size: 15px;    
     width: 30px;
     height: 30px;
@@ -56,7 +56,7 @@ export const ReadFilledStyled = styled(ReadFilled)`
 `
 
 export const ShoppingFilledStyled = styled(ShoppingFilled)`
-    background-color: gray;
+    background-color: #808080;
     width: 30px;
     height: 30px;
     font-size: 15px;
@@ -71,7 +71,7 @@ export const NavItem = styled.h5`
     display: flex;
     align-items: center;
     gap: 17px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 15px;
     height: 40px;
     padding: 0px 10px;
@@ -79,7 +79,7 @@ export const NavItem = styled.h5`
     align-items: center;
     color: gray;
     &:hover{
-        background-color: #f7f9fa;
+        background-color: #E8F0FE;
     }
 `
 
@@ -90,11 +90,9 @@ export const Mid = styled.div`
 
 export const Contents = styled.section`
     width: 100%;
-    padding:40px;
+    padding: 60px; 
     min-height: 50vh;    
-    max-width: 900px;
-    margin: 0px auto;
-    /* background-color: #f4f6fa; */
+    max-width: 1000px;
 `
 
 export const Header = styled.header`
@@ -106,6 +104,7 @@ export const Header = styled.header`
     border-bottom: 1px solid #dae1e6;
     padding: 0px 20px;    
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+    overflow: hidden;
     z-index: 2;
 `
 
@@ -122,7 +121,9 @@ export const User = styled.div`
     align-items: center;
     gap: 10px;
     padding: 10px 10px;
-    
+    &:hover{
+        background-color: #E8F0FE;
+    }
 `
 
 export const UserAvatar = styled(MehFilled)`
@@ -140,6 +141,7 @@ export const UserAvatar = styled(MehFilled)`
 
 export const UserName = styled.p`
     font-size: 13px;
+    font-weight: 500;
 `
 
 

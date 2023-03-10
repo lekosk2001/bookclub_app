@@ -12,45 +12,37 @@ export const InputContainer = styled.div`
     gap: 20px;
 `
 
-export const InputTwo = styled.div`
-    padding: 15px;
+export const InputGroupBox = styled.div`
     width: 100%;
     display: flex;
     gap:15px;
-    background-color: #f4f6fa;
 `
-
-
-export const InputWrapper = styled.div`
-    display: flex;
+export const AddressInputGroupBox = styled.div`
+    padding: 15px;
     width: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap:10px;
+    background-color: #f7f9fa;
 `
-
-
-
-export const InputLabel = styled.label`
-    font-size: 15px;
-    font-weight: 800;
-    color: gray;
-`
-
-
-export const TextAreaStyled = styled.textarea`
-    height: 300px;
-    border: 0px;
-    padding: 10px;
-    border-radius :0px;
-    background-color: #f4f6fa;
-`
-
 
 export const InputStyled = styled.input`
     height: 40px;    
-    border: 0px;
     padding: 0px 10px;
+    border: 1px solid #dae1e6;
+    width: 100%;
 `
+
+export const TextAreaStyled = styled.textarea`
+    font-family: initial;
+    height: 300px;
+    border: 0px;
+    font-size: 15px;
+    padding: 20px;
+    border-radius :0px;    
+    border: 1px solid #dae1e6;    
+`
+
 
 export const InputTitle = styled.input`
     font-size: 36px;

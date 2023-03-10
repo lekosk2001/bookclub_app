@@ -14,7 +14,7 @@ const Layout = (props: Props) => {
         <S.Main>
             <S.Header>
                 <S.Logo onClick={() => { router.push(`/`) }}>
-                    📔북클럽
+                    BOOKCLUB
                 </S.Logo>
                 <S.User>
                     <S.UserAvatar />
@@ -25,7 +25,7 @@ const Layout = (props: Props) => {
             <S.Mid>
                 <S.Aside>
                     <S.Nav>
-                        <Link href={"/boards"}><S.NavItem><S.ReadFilledStyled /> 자유토론</S.NavItem></Link>
+                        <Link href={"/boards"}><S.NavItem><S.ReadFilledStyled /> 자유게시판</S.NavItem></Link>
                         <Link href={"/market"}><S.NavItem><S.ShoppingFilledStyled />중고장터</S.NavItem></Link>
                         <Link href={"/mypage"}><S.NavItem><S.SettingFilledStyled />내 정보</S.NavItem></Link>
                     </S.Nav>

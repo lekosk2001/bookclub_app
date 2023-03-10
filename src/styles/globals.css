@@ -1,3 +1,5 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
 :root {
     --max-width: 1100px;
     --border-radius: 12px;
@@ -80,6 +82,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
 html,

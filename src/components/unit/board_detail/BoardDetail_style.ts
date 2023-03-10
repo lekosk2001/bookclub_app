@@ -1,4 +1,4 @@
-import { EnvironmentOutlined, LinkOutlined, MehFilled } from "@ant-design/icons";
+import { DislikeFilled, EnvironmentOutlined, LikeFilled, LinkOutlined, MehFilled } from "@ant-design/icons";
 import styled from "@emotion/styled";
 
 export const ContentsBody = styled.div`
@@ -11,6 +11,7 @@ export const ContentsBody = styled.div`
 
 export const ContentsText = styled.p`
     font-size: 15px;
+    min-height: 200px;
     line-height: 24px;
 `
 
@@ -21,41 +22,82 @@ export const User = styled.div`
     gap: 10px;
     
 `
+
+export const LikeCountBox = styled.div`
+    cursor: pointer;
+	display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    height: 30px;
+    gap: 5px;
+    p{font-size: 15px;}
+        border-radius: 15px;
+    &:hover{
+        background-color: #E8F0FE;
+    }
+`;
+
+
 export const ContentHeadButtons = styled.div`
 	display: flex;
-	gap: 20px;
 	align-items: center;
 	svg {
 		cursor: pointer;
 	}
 `;
 
-
-export const LinkOutlinedStyled = styled(LinkOutlined)`
+export const LikeButtonStyled = styled(LikeFilled)`
     font-size: '15px';
-    color: 'gray' ;
-    width: 30px;
-    height: 30px;
+    color: #5f6368;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+`;
+
+export const DisLikeButtonStyled = styled(DislikeFilled)`
+    font-size: '15px';
+    color: #5f6368;
     display: flex;
     justify-content: center;
     align-items: center;
 `;
 
-export const EnvironmentOutlinedStyled = styled(EnvironmentOutlined)`
+
+
+export const LinkOutlinedStyled = styled(LinkOutlined)`
     font-size: '15px';
-    color: 'gray' ;
+    color: #5f6368;
     width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
+    &:hover{
+        background-color: #E8F0FE;
+    }
+`;
+
+export const EnvironmentOutlinedStyled = styled(EnvironmentOutlined)`
+    font-size: '15px';
+    color: #5f6368;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 15px;
+    &:hover{
+        background-color: #E8F0FE;
+    }
 `;
 
 export const UserTextBox = styled.div`
 `
 
 export const CreatedAtText = styled.p`
-color: gray;
+color: #5f6368;
     font-size: 11px;
 `
 
@@ -67,7 +109,7 @@ export const UserAvatar = styled(MehFilled)`
     height: 30px;
     font-size: 20px;
     color: #fff;
-    background-color: gray;
+    background-color: #5f6368;
     border-radius: 20px;
 `
 

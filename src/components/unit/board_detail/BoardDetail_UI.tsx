@@ -1,11 +1,11 @@
 import { dateFormat } from '@/common/utils';
 import { ButtonWrapper, Contents, ContentsHeader, Title } from '@/components/common/style';
-import { EnvironmentOutlined, LinkOutlined } from '@ant-design/icons';
-import { useQuery } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { Button, Popover } from 'antd';
 import { useRouter } from 'next/router';
 import React from 'react'
-import { FETCH_BOARD } from './BoardDetail_queries';
+import BoardCommentList_container from '../board_comment_list/BoardCommentList_container';
+import { DELETE_BOARDS, DISLIKEBOARD, FETCH_BOARD, LIKEBOARD } from './BoardDetail_queries';
 import * as S from "./BoardDetail_style"
 
 type Props = {}
@@ -21,7 +21,86 @@ const BoardDetail_UI = (props: Props) => {
     }
     );
 
+    console.log(data)
+
     const content = <p>{data?.fetchBoard.boardAddress?.address}</p>;
+    const CommentsData = {
+        __typename: undefined,
+        _id: '',
+        contents: '',
+        createdAt: undefined,
+        deletedAt: undefined,
+        rating: 0,
+        updatedAt: undefined,
+        user: undefined,
+        writer: undefined
+    }
+    const clip = () => {
+
+        var url = '';
+        var textarea = document.createElement("textarea");
+        document.body.appendChild(textarea);
+        url = url = window.document.location.href;
+        textarea.value = url;
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        alert("URL이 복사되었습니다.")
+    }
+
+    const [deleteBoard] = useMutation(DELETE_BOARDS);
+    const onClickDeleteBoard = async () => {
+        try {
+            if (confirm('정말 삭제하시겠습니까?')) {
+                await deleteBoard({ variables: { boardId } });
+                alert('삭제되었습니다.')
+                router.push(`/boards`);
+            } else {
+                return;
+            }
+        } catch (error) {
+            if (error instanceof Error) alert(error.message);
+        }
+    };
+
+    const [likeBoard] = useMutation(LIKEBOARD);
+    const onClicklikeBoard = async () => {
+        try {
+            await likeBoard({
+                variables: { boardId },
+                refetchQueries: [
+                    {
+                        query: FETCH_BOARD,
+                        variables: {
+                            boardId,
+                        },
+                    },
+                ],
+            });
+        } catch (error) {
+            if (error instanceof Error) alert(error.message);
+        }
+    };
+
+
+    const [dislikeBoard] = useMutation(DISLIKEBOARD);
+    const onClickDislikeBoard = async () => {
+        try {
+            await dislikeBoard({
+                variables: { boardId },
+                refetchQueries: [
+                    {
+                        query: FETCH_BOARD,
+                        variables: {
+                            boardId,
+                        },
+                    },
+                ],
+            });
+        } catch (error) {
+            if (error instanceof Error) alert(error.message);
+        }
+    };
 
 
     return (
@@ -29,7 +108,7 @@ const BoardDetail_UI = (props: Props) => {
             <ContentsHeader>
                 <Title>{data?.fetchBoard.title ? data?.fetchBoard.title : "제목없음"}</Title>
                 <ButtonWrapper>
-                    <Button danger onClick={() => { router.push(`/boards`) }}>삭제</Button>
+                    <Button danger onClick={onClickDeleteBoard}>삭제</Button>
                     <Button onClick={() => { router.push(`/boards`) }}>목록으로</Button>
                 </ButtonWrapper>
             </ContentsHeader>
@@ -43,10 +122,11 @@ const BoardDetail_UI = (props: Props) => {
                     </S.UserTextBox>
                 </S.User>
                 <S.ContentHeadButtons>
+                    <S.LikeCountBox onClick={onClicklikeBoard}><S.LikeButtonStyled /><p>{data?.fetchBoard.likeCount}</p></S.LikeCountBox>
+                    <S.LikeCountBox onClick={onClickDislikeBoard}><S.DisLikeButtonStyled /> <p>{data?.fetchBoard.dislikeCount}</p></S.LikeCountBox>
+
                     <S.LinkOutlinedStyled
-                        onClick={() => {
-                            console.log('http://localhost:3000/' + router.asPath);
-                        }}
+                        onClick={() => { clip() }}
                     />
                     {data?.fetchBoard.boardAddress?.address &&
                         <Popover content={content} placement="topRight">
@@ -61,7 +141,6 @@ const BoardDetail_UI = (props: Props) => {
             <S.ContentsBody>
                 <S.ContentsText>{data?.fetchBoard.contents}</S.ContentsText>
             </S.ContentsBody>
-
         </Contents>
     )
 }

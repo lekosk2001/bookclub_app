@@ -33,7 +33,7 @@ export const UserAvatar = styled(MehFilled)`
     height: 30px;
     font-size: 20px;
     color: var(--bg-color-white);
-    background-color: var(--text-sub-color);
+    background-color: var(--text-color-sub);
     border-radius: 20px;
 `
 
@@ -82,7 +82,7 @@ export const EditOutlinedStyled = styled(EditOutlined)`
 	justify-content: center;
 	align-items: center;
 	height: 30px;
-	color: var(--text-sub-color);
+	color: var(--text-color-sub);
 	border-radius: 5px;
     &:hover{
         background-color: var(--hover-bg-color);
@@ -96,7 +96,7 @@ export const CloseOutlinedStyled = styled(CloseOutlined)`
 	align-items: center;
 	width: 30px;
 	height: 30px;
-	color: var(--text-sub-color);
+	color: var(--text-color-sub);
 	border-radius: 5px;
     &:hover{
         background-color: var(--hover-bg-color);
@@ -105,7 +105,7 @@ export const CloseOutlinedStyled = styled(CloseOutlined)`
 
 export const CommentFooter = styled.p`
 	font-size: 11px;
-	color: var(--text-sub-color);;
+	color: var(--text-color-sub);;
 `;
 
 export const Space = styled.div<{ hight: number }>`

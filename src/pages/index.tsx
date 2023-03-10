@@ -16,10 +16,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <section>
-                타이틀
-            </section>
-            <section>
-                타이틀
+                메인페이지
             </section>
         </>
     );

@@ -1,6 +1,8 @@
+import { activeNav } from "@/common/store/atoms";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
+import { useRecoilState } from "recoil";
 import * as S from "./Layout_style";
 
 type Props = {
@@ -9,12 +11,22 @@ type Props = {
 
 const Layout = (props: Props) => {
     const router = useRouter();
+    const [currentNav, setCurrentNav] = useRecoilState(activeNav);
+
+    useEffect(() => {
+        if (router.route.includes("boards")) { setCurrentNav("boards") }
+        else if (router.route.includes("market")) { setCurrentNav("market") }
+        else if (router.route.includes("mypage")) { setCurrentNav("mypage") }
+        else { setCurrentNav("") }
+    }, [router.route, setCurrentNav])
+
+    console.log(router)
 
     return (<>
         <S.Main>
             <S.Header>
                 <S.Logo onClick={() => { router.push(`/`) }}>
-                    BOOKCLUB
+                    <span style={{ color: "var(--text-color-active)" }}>BOOK</span>CLUB
                 </S.Logo>
                 <S.User>
                     <S.UserAvatar />
@@ -25,9 +37,15 @@ const Layout = (props: Props) => {
             <S.Mid>
                 <S.Aside>
                     <S.Nav>
-                        <Link href={"/boards"}><S.NavItem><S.ReadFilledStyled /> 자유게시판</S.NavItem></Link>
-                        <Link href={"/market"}><S.NavItem><S.ShoppingFilledStyled />중고장터</S.NavItem></Link>
-                        <Link href={"/mypage"}><S.NavItem><S.SettingFilledStyled />내 정보</S.NavItem></Link>
+                        <Link href={"/boards"}><S.NavItem active={currentNav === "boards"}>
+                            <S.ReadFilledStyled active={currentNav === "boards" ? "true" : "false"} /> 자유게시판
+                        </S.NavItem></Link>
+                        <Link href={"/market"}><S.NavItem active={currentNav === "market"}>
+                            <S.ShoppingFilledStyled active={currentNav === "market" ? "true" : "false"} />중고장터
+                        </S.NavItem></Link>
+                        <Link href={"/mypage"}><S.NavItem active={currentNav === "mypage"}>
+                            <S.SettingFilledStyled active={currentNav === "mypage" ? "true" : "false"} />내 정보
+                        </S.NavItem></Link>
                     </S.Nav>
                 </S.Aside>
                 <S.Contents>{props.children}</S.Contents>

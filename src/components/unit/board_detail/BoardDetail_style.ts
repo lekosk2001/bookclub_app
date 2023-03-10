@@ -48,7 +48,7 @@ export const ContentHeadButtons = styled.div`
 
 export const LikeButtonStyled = styled(LikeFilled)`
     font-size: '15px';
-    color: var(--text-sub-color);;
+    color: var(--text-color-sub);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +57,7 @@ export const LikeButtonStyled = styled(LikeFilled)`
 
 export const DisLikeButtonStyled = styled(DislikeFilled)`
     font-size: '15px';
-    color: var(--text-sub-color);;
+    color: var(--text-color-sub);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +67,7 @@ export const DisLikeButtonStyled = styled(DislikeFilled)`
 
 export const LinkOutlinedStyled = styled(LinkOutlined)`
     font-size: '15px';
-    color: var(--text-sub-color);;
+    color: var(--text-color-sub);
     width: 30px;
     height: 30px;
     display: flex;
@@ -81,7 +81,7 @@ export const LinkOutlinedStyled = styled(LinkOutlined)`
 
 export const EnvironmentOutlinedStyled = styled(EnvironmentOutlined)`
     font-size: '15px';
-    color: var(--text-sub-color);;
+    color: var(--text-color-sub);
     width: 30px;
     height: 30px;
     display: flex;
@@ -97,7 +97,7 @@ export const UserTextBox = styled.div`
 `
 
 export const CreatedAtText = styled.p`
-color: var(--text-sub-color);;
+    color: var(--text-color-sub);
     font-size: 11px;
 `
 
@@ -109,7 +109,7 @@ export const UserAvatar = styled(MehFilled)`
     height: 30px;
     font-size: 20px;
     color: var(--bg-color-white);
-    background-color: var(--text-sub-color);;
+    background-color: var(--text-color-sub);
     border-radius: 20px;
 `
 

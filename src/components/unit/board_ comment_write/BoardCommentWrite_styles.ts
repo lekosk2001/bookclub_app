@@ -34,7 +34,7 @@ export const Input = styled.input`
 	font-size: 13px;
 	font-weight: 500;
 	&::placeholder {
-		color: var(--text-sub-color);
+		color: var(--text-color-sub);
 	}
 `;
 
@@ -53,7 +53,7 @@ export const CommetWriteBox = styled.textarea`
 	text-align: start;
 	resize: none;
 	&::placeholder {
-		color:  var(--text-sub-color);
+		color:  var(--text-color-sub);
 	}
 	border-bottom: 0px;
 `;
@@ -70,13 +70,13 @@ export const CommentSubmitBox = styled.div`
 export const CommentLength = styled.h4`
 	font-weight: 400;
 	font-size: 13px;
-	color:  var(--text-sub-color);
+	color:  var(--text-color-sub);
 `;
 
 export const CommentSubmitButton = styled.button<{ valid: boolean }>`
 	height: 40px;
 	cursor: ${(props) => (props.valid ? 'pointer' : 'default')};
-	background-color: ${(props) => (props.valid ? 'var(--text-color-active)' : 'var(--text-sub-color)')};
+	background-color: ${(props) => (props.valid ? 'var(--text-color-active)' : 'var(--text-color-sub)')};
 	border: 0px;
 	font-size: 13px;
 	padding: 0px 15px;
@@ -86,7 +86,7 @@ export const CommentSubmitButton = styled.button<{ valid: boolean }>`
 
 export const CloseCircleOutlinedStyled= styled(CloseCircleOutlined)`
 	font-size: 18px;
-	color: var(--text-sub-color);
+	color: var(--text-color-sub);
 	display: flex;
 	justify-content: center;
 	align-items: center;

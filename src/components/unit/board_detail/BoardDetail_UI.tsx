@@ -24,17 +24,6 @@ const BoardDetail_UI = (props: Props) => {
     console.log(data)
 
     const content = <p>{data?.fetchBoard.boardAddress?.address}</p>;
-    const CommentsData = {
-        __typename: undefined,
-        _id: '',
-        contents: '',
-        createdAt: undefined,
-        deletedAt: undefined,
-        rating: 0,
-        updatedAt: undefined,
-        user: undefined,
-        writer: undefined
-    }
     const clip = () => {
 
         var url = '';

@@ -55,7 +55,7 @@ export const InputStyled = styled.input`
     padding: 0px 10px;
     border: 1px solid var(--border-color);
 	&::placeholder {
-		color: var(--text-sub-color);
+		color: var(--text-color-sub);
 		font-weight: 400;
 	}
 `

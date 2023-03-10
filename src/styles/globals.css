@@ -2,9 +2,11 @@
 
 :root {
     --border-color: #dae1e6;
-    --border-color-black: #000;
+    --border-color-black: hsl(0, 0%, 20%);
 
-    --text-sub-color: #979797;    
+    --text-color-main: hsl(0, 0%, 20%);
+    --text-color-sub: hsl(0, 0%, 60%);
+    --text-color-sub-week: hsl(0, 0%, 80%);
     --text-color-active: #4285F4;
     --text-color-white: #fff;
 
@@ -37,6 +39,8 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+p{color: var(--text-color-main);}
 
 
 @media (prefers-color-scheme: dark) {

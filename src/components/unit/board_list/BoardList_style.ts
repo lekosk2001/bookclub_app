@@ -34,12 +34,13 @@ export const Row = styled.div`
     }
 `
 
-export const Column = styled.span`
+export const Column = styled.p`
 	display: flex;
 	justify-content: center;
 	align-items: center;
     white-space: nowrap;
 	overflow: hidden;
+    font-size: 15px;
 
     &:nth-of-type(1) {
 		display: flex;
@@ -62,7 +63,8 @@ export const Column = styled.span`
 `
 
 
-export const Tab = styled.span`
+export const Tab = styled.p`
+    font-size: 15px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

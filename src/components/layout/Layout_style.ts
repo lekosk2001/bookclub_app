@@ -15,8 +15,7 @@ export const Aside = styled.aside`
     max-width: 240px;
     min-width: 240px;    
     min-height: 100%;
-    padding: 20px;
-    padding-top: 30px;
+    padding: 30px 20px;
     gap: 20px;
     z-index: 1;
 `
@@ -44,8 +43,8 @@ export const Nav = styled.nav`
 `
 
 
-export const SettingFilledStyled = styled(SettingFilled)`
-    background-color: var(--text-sub-color);
+export const ReadFilledStyled = styled(ReadFilled)<{active:string}>`
+    background-color:${(props)=>props.active==="true"? "var(--text-color-active)":"var(--text-color-sub)"};
     font-size: 15px;    
     width: 30px;
     height: 30px;
@@ -56,8 +55,8 @@ export const SettingFilledStyled = styled(SettingFilled)`
     color: var(--bg-color-white); 
 `
 
-export const ReadFilledStyled = styled(ReadFilled)`
-    background-color: var(--text-sub-color);
+export const SettingFilledStyled = styled(SettingFilled)<{active:string}>`
+    background-color:${(props)=>props.active==="true"? "var(--text-color-active)":"var(--text-color-sub)"};
     font-size: 15px;    
     width: 30px;
     height: 30px;
@@ -68,29 +67,29 @@ export const ReadFilledStyled = styled(ReadFilled)`
     color: var(--bg-color-white); 
 `
 
-export const ShoppingFilledStyled = styled(ShoppingFilled)`
-    background-color: var(--text-sub-color);
+export const ShoppingFilledStyled = styled(ShoppingFilled)<{active:string}>`
+    color: var(--bg-color-white);
     width: 30px;
     height: 30px;
     font-size: 15px;
-    color: var(--bg-color-white); 
+    background-color:${(props)=>props.active==="true"? "var(--text-color-active)":"var(--text-color-sub)"};
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
 `
 
-export const NavItem = styled.h5`
+export const NavItem = styled.h5<{active:boolean}>`
     display: flex;
     align-items: center;
-    gap: 17px;
+    gap: 20px;
     font-weight: 500;
     font-size: 15px;
-    height: 40px;
-    padding: 0px 10px;
+    padding: 10px;
     display: flex;
     align-items: center;
-    color: var(--text-sub-color);
+    color: ${(props)=>props.active? "var(--text-color-active)":"var(--text-color-sub)"};
+    background-color: ${(props)=>props.active? "var(--hover-bg-color)":"default"};
     &:hover{
         background-color: var(--hover-bg-color);
     }
@@ -140,7 +139,7 @@ export const UserAvatar = styled(MehFilled)`
     height: 30px;
     font-size: 20px;
     color: var(--bg-color-white);
-    background-color: var(--text-sub-color);
+    background-color: var(--text-color-sub);
     border-radius: 20px;
 `
 

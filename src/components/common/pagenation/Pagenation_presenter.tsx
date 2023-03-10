@@ -21,12 +21,12 @@ const Pagenation_presenter = (props: Props) => {
 		<S.PageSection>
 			<S.PageButtons>
 				<LeftCircleFilled
-					disabled={props.startPage === 1}
 					onClick={props.onClickPrev}
 					style={{
 						padding: '5px',
-						color: props.startPage === 1 ? 'var(--text-sub-color)' : 'var(--text-sub-color);',
-						fontSize: "24px"
+						color: props.startPage === 1 ? 'var(--text-color-sub-week)' : 'var(--text-color-sub)',
+						fontSize: "24px",
+						cursor: props.startPage === 1 ? 'auto' : 'pointer'
 					}}
 				/>
 
@@ -55,9 +55,10 @@ const Pagenation_presenter = (props: Props) => {
 						padding: '5px',
 						color:
 							props.startPage + props.pageNumber > props.lastPage
-								? 'var(--text-sub-color)'
-								: 'var(--text-sub-color);',
-						fontSize: "24px"
+								? 'var(--text-color-sub-week)'
+								: 'var(--text-color-sub)',
+						fontSize: "24px",
+						cursor: props.startPage + props.pageNumber > props.lastPage ? 'auto' : 'pointer'
 					}}
 					disabled={props.startPage + props.pageNumber > props.lastPage}
 				/>

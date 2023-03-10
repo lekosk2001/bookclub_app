@@ -2,12 +2,16 @@
 
 :root {
     --border-color: #dae1e6;
-    --text-sub-color: #808080;    
+    --border-color-black: #000;
+
+    --text-sub-color: #979797;    
     --text-color-active: #4285F4;
-    --hover-bg-color: #E8F0FE;
+    --text-color-white: #fff;
+
     --bg-color-white: #fff;
     --bg-color-gray: #f7f9fa;    
-    --border-color-black: #000;
+    
+    --hover-bg-color: #E8F0FE;
 }
 /* 
 @media (prefers-color-scheme: dark) {
@@ -25,9 +29,8 @@
 html,
 body {
     max-width: 100vw;
-    overflow-x: hidden;
-    height: 100%;
-    
+    overflow-x: hidden;    
+    height: 100vh;
 }
 
 a {
@@ -35,9 +38,6 @@ a {
     text-decoration: none;
 }
 
-#__next{    
-    height: 100%;
-}
 
 @media (prefers-color-scheme: dark) {
     html {

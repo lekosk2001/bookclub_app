@@ -2,6 +2,7 @@ import { IBoardComment, IMutation, IMutationDeleteBoardCommentArgs, IQuery, IQue
 import { useMutation, useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
 import React from 'react'
+import BoardCommentWrite_container from '../board_ comment_write/BoardCommentWrite_container';
 import BoardCommentList_item from './BoardCommentList_item';
 import { DELETE_BOARDS_COMMNET, FETCH_BOARD_COMMENT } from './BoardCommentList_queries';
 import * as S from './BoardCommentList_styles';
@@ -50,6 +51,11 @@ const BoardCommentList_UI = () => {
     return (
         <S.CommentsList>
             <S.CommetLabel>댓글</S.CommetLabel>
+            <BoardCommentWrite_container
+                isEditing={false}
+                setIsEditing={() => null}
+                comment={null}
+            />
             {CommentsData?.fetchBoardComments.map(
                 (comment: IBoardComment) =>
                     <BoardCommentList_item
@@ -61,6 +67,7 @@ const BoardCommentList_UI = () => {
                     />
 
             )}
+
         </S.CommentsList>
     )
 }

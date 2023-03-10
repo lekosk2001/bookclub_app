@@ -35,7 +35,9 @@ const Layout = (props: Props) => {
             </S.Mid>
 
         </S.Main>
-        {/* <S.Footer>푸터</S.Footer> */}
+        <S.Footer>
+            <S.FooterText>푸터</S.FooterText>
+        </S.Footer>
     </>)
 
 };

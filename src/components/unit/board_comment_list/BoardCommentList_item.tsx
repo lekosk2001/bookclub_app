@@ -2,6 +2,7 @@ import * as S from './BoardCommentList_styles';
 import React, { useState } from 'react';
 import { IBoardComment } from '@/common/types/generated/types';
 import dayjs from 'dayjs';
+import BoardCommentWrite_container from '../board_ comment_write/BoardCommentWrite_container';
 
 interface BoardCommentList_item_Props {
 	onClickDeleteBoardComment: (arg0: string) => void;
@@ -39,13 +40,13 @@ const BoardCommentList_item = (props: BoardCommentList_item_Props) => {
 					</S.CommentContents>
 				</S.CommentBox>
 			)}
-			{/* {isEditing && (
+			{isEditing && (
 				<BoardCommentWrite_container
 					comment={comment}
 					isEditing={true}
 					setIsEditing={setIsEditing}
 				/>
-			)} */}
+			)}
 		</>
 	);
 };

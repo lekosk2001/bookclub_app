@@ -7,17 +7,17 @@ export const PageSection = styled.section`
 	display: flex;
 	padding: 40px 0px;
 	flex-direction: column;
-	gap: 15px;
 	background-color: var(--bg-color-gray);
-	padding: 20px;
+	padding: 10px 20px;
+	gap: 5px;
 `;
 
 export const PageButtons = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 10px 0px;
 	width: 100%;
+	padding: 10px;
 	border-bottom: 1px solid var(--border-color) ;
 `;
 

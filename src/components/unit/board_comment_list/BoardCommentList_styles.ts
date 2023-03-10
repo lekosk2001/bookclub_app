@@ -20,7 +20,7 @@ export const CommentBox = styled.div`
 	width: inherit;
 	display: flex;
 	border-top: 1px solid var(--border-color);
-	gap: 16px;
+	gap: 15px;
 	padding-top: 20px;
 `;
 

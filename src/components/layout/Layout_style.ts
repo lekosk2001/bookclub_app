@@ -3,20 +3,33 @@ import { CaretDownOutlined, MehFilled, ReadFilled, SettingFilled, ShoppingFilled
 
 export const Main = styled.main`
     display: flex;
+    height: inherit;
     flex-direction: column;
-    height: 100%;
+
 `
+
 export const Aside = styled.aside`
+    border-right:1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    border-right:1px solid var(--border-color);
     max-width: 240px;
-    min-width: 240px;
+    min-width: 240px;    
+    min-height: 100%;
     padding: 20px;
     padding-top: 30px;
     gap: 20px;
     z-index: 1;
 `
+
+
+
+export const Contents = styled.section`
+    width: 100%;
+    padding: 60px 60px 40px 60px;
+    height: 100%;
+    max-width: 1000px;    
+`
+
 
 export const Article = styled.article`
     width: 100%;
@@ -87,14 +100,6 @@ export const Mid = styled.div`
     display: flex;
     height: 100%;
 `
-
-export const Contents = styled.section`
-    width: 100%;
-    padding: 60px 60px 0px 60px;
-    min-height: 50vh;
-    max-width: 1000px;
-`
-
 export const Header = styled.header`
     width: inherit;
     height: 50px;
@@ -161,7 +166,11 @@ export const UserCaretDown = styled(CaretDownOutlined)`
 export const Footer = styled.footer`
     border-top: 1px solid var(--border-color);
     display: flex;
-    height: 160px;
+    height: 100px;
     justify-content: center;
     align-items: center;
+`
+export const FooterText = styled.p`
+    font-size: 11px;
+    color: var(--text-color-gray);
 `

@@ -7,7 +7,7 @@ export const ListContainer = styled.div`
 `
 
 export const Tabs = styled.div`
-    gap: 10px;
+    gap: 15px;
     display: flex;
     height: 40px;
     border-top: 1px solid var(--border-color-black);
@@ -26,7 +26,7 @@ export const Row = styled.div`
     border-top: 1px solid var(--border-color);
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    font-size: 15px;
     padding: 0px 20px;    
     background-color: var(--bg-color-white);
         &:hover{
@@ -82,7 +82,7 @@ export const Tab = styled.span`
 	}
 	&:nth-of-type(3) {		
 		display: flex;
-        width: 100px;        
+        width: 120px;        
         font-weight: 500;
 	}
 	&:nth-of-type(4) {		

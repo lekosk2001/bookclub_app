@@ -2,7 +2,7 @@ import { DislikeFilled, EnvironmentOutlined, LikeFilled, LinkOutlined, MehFilled
 import styled from "@emotion/styled";
 
 export const ContentsBody = styled.div`
-    border-top: 1px solid #dae1e6;
+    border-top: 1px solid var(--border-color);
     padding: 40px 0px;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ export const LikeCountBox = styled.div`
     p{font-size: 15px;}
         border-radius: 15px;
     &:hover{
-        background-color: #E8F0FE;
+        background-color: var(--hover-bg-color);
     }
 `;
 
@@ -48,7 +48,7 @@ export const ContentHeadButtons = styled.div`
 
 export const LikeButtonStyled = styled(LikeFilled)`
     font-size: '15px';
-    color: #5f6368;
+    color: var(--text-sub-color);;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +57,7 @@ export const LikeButtonStyled = styled(LikeFilled)`
 
 export const DisLikeButtonStyled = styled(DislikeFilled)`
     font-size: '15px';
-    color: #5f6368;
+    color: var(--text-sub-color);;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +67,7 @@ export const DisLikeButtonStyled = styled(DislikeFilled)`
 
 export const LinkOutlinedStyled = styled(LinkOutlined)`
     font-size: '15px';
-    color: #5f6368;
+    color: var(--text-sub-color);;
     width: 30px;
     height: 30px;
     display: flex;
@@ -75,13 +75,13 @@ export const LinkOutlinedStyled = styled(LinkOutlined)`
     align-items: center;
     border-radius: 15px;
     &:hover{
-        background-color: #E8F0FE;
+        background-color: var(--hover-bg-color);
     }
 `;
 
 export const EnvironmentOutlinedStyled = styled(EnvironmentOutlined)`
     font-size: '15px';
-    color: #5f6368;
+    color: var(--text-sub-color);;
     width: 30px;
     height: 30px;
     display: flex;
@@ -89,7 +89,7 @@ export const EnvironmentOutlinedStyled = styled(EnvironmentOutlined)`
     align-items: center;    
     border-radius: 15px;
     &:hover{
-        background-color: #E8F0FE;
+        background-color: var(--hover-bg-color);
     }
 `;
 
@@ -97,7 +97,7 @@ export const UserTextBox = styled.div`
 `
 
 export const CreatedAtText = styled.p`
-color: #5f6368;
+color: var(--text-sub-color);;
     font-size: 11px;
 `
 
@@ -108,8 +108,8 @@ export const UserAvatar = styled(MehFilled)`
     width: 30px;
     height: 30px;
     font-size: 20px;
-    color: #fff;
-    background-color: #5f6368;
+    color: var(--bg-color-white);
+    background-color: var(--text-sub-color);;
     border-radius: 20px;
 `
 

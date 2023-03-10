@@ -1,7 +1,7 @@
-import { dateFormat } from '@/common/utils';
 import { ButtonWrapper, Contents, ContentsHeader, Title } from '@/components/common/style';
 import { useMutation, useQuery } from '@apollo/client';
 import { Button, Popover } from 'antd';
+import dayjs from 'dayjs';
 import { useRouter } from 'next/router';
 import React from 'react'
 import BoardCommentList_container from '../board_comment_list/BoardCommentList_container';
@@ -118,7 +118,7 @@ const BoardDetail_UI = (props: Props) => {
                     <S.UserAvatar />
                     <S.UserTextBox>
                         <S.UserName>{data?.fetchBoard.writer}</S.UserName>
-                        <S.CreatedAtText>{data?.fetchBoard.createdAt ? dateFormat(data?.fetchBoard.createdAt) : ""}</S.CreatedAtText>
+                        <S.CreatedAtText>{data?.fetchBoard.createdAt ? dayjs(data?.fetchBoard.createdAt).format("YYYY.MM.DD HH:mm") : ""}</S.CreatedAtText>
                     </S.UserTextBox>
                 </S.User>
                 <S.ContentHeadButtons>

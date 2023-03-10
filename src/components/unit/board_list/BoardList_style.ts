@@ -3,19 +3,19 @@ import styled from "@emotion/styled";
 export const ListContainer = styled.div`
     display: flex;
     flex-direction: column;    
-    border-bottom: 1px solid #dae1e6;
+    border-bottom: 1px solid var(--border-color);
 `
 
 export const Tabs = styled.div`
     gap: 10px;
     display: flex;
     height: 40px;
-    border-top: 1px solid #000;
+    border-top: 1px solid var(--border-color-black);
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
     padding: 0px 20px;
-    background-color: #fff;
+    background-color: var(--bg-color-white);
 `
 
 export const Row = styled.div`
@@ -23,14 +23,14 @@ export const Row = styled.div`
     gap: 15px;
     display: flex;
     height: 50px;
-    border-top: 1px solid #dae1e6;
+    border-top: 1px solid var(--border-color);
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
     padding: 0px 20px;    
-    background-color: #fff;
+    background-color: var(--bg-color-white);
         &:hover{
-            background-color:#E8F0FE;
+            background-color:var(--hover-bg-color);
     }
 `
 
@@ -53,7 +53,7 @@ export const Column = styled.span`
 	}
 	&:nth-of-type(3) {		
 		display: flex;
-        width: 100px;
+        width: 120px;
 	}
 	&:nth-of-type(4) {		
 		display: flex;

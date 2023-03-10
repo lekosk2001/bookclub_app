@@ -23,13 +23,13 @@ export const AddressInputGroupBox = styled.div`
     display: flex;
     flex-direction: column;
     gap:10px;
-    background-color: #f7f9fa;
+    background-color: var(--bg-color-gray);
 `
 
 export const InputStyled = styled.input`
     height: 40px;    
     padding: 0px 10px;
-    border: 1px solid #dae1e6;
+    border: 1px solid var(--border-color);
     width: 100%;
 `
 
@@ -40,7 +40,7 @@ export const TextAreaStyled = styled.textarea`
     font-size: 15px;
     padding: 20px;
     border-radius :0px;    
-    border: 1px solid #dae1e6;    
+    border: 1px solid var(--border-color);    
 `
 
 
@@ -49,7 +49,7 @@ export const InputTitle = styled.input`
     font-weight: 800;
     padding: 0px;
     border: 0px;
-    border-bottom: 1px solid #dae1e6;
+    border-bottom: 1px solid var(--border-color);
     border-radius: 0px;
 `
 

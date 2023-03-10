@@ -8,7 +8,7 @@ export const PageSection = styled.section`
 	padding: 40px 0px;
 	flex-direction: column;
 	gap: 15px;
-	background-color: #f7f9fa;
+	background-color: var(--bg-color-gray);
 	padding: 20px;
 `;
 
@@ -18,7 +18,7 @@ export const PageButtons = styled.div`
 	align-items: center;
 	padding: 10px 0px;
 	width: 100%;
-	border-bottom: 1px solid #dae1e6 ;
+	border-bottom: 1px solid var(--border-color) ;
 `;
 
 export const PageButton = styled.button<{ active?: boolean }>`
@@ -31,10 +31,10 @@ export const PageButton = styled.button<{ active?: boolean }>`
 	width: 40px;
 	cursor: pointer;
 	font-weight:  ${(props) => (props.active ?? false ? '800' : 'default')};
-	color: ${(props) => (props.active ?? false ? '#4285F4' : 'default')};
+	color: ${(props) => (props.active ?? false ? 'var(--text-color-active)' : 'default')};
 	border-radius: 5px;
 	&:hover{
-		background-color: #E8F0FE;
+		background-color: var(--hover-bg-color);
 	}
 `;
 
@@ -53,9 +53,9 @@ export const InputStyled = styled.input`
 	width: 300px;
     height: 40px;    
     padding: 0px 10px;
-    border: 1px solid #dae1e6;
+    border: 1px solid var(--border-color);
 	&::placeholder {
-		color: #ddd;
+		color: var(--text-sub-color);
 		font-weight: 400;
 	}
 `

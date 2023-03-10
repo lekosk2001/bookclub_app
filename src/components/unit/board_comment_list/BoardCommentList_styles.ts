@@ -8,7 +8,7 @@ export const CommentsList = styled.section`
 	gap: 20px;
 	margin-bottom: 20px;
 	padding: 20px;
-	border: 1px solid #dae1e6;
+	border: 1px solid var(--border-color);
 `;
 
 export const CommetLabel = styled.h3`
@@ -19,7 +19,7 @@ export const CommetLabel = styled.h3`
 export const CommentBox = styled.div`
 	width: inherit;
 	display: flex;
-	border-top: 1px solid #dae1e6;
+	border-top: 1px solid var(--border-color);
 	gap: 16px;
 	padding-top: 20px;
 `;
@@ -32,8 +32,8 @@ export const UserAvatar = styled(MehFilled)`
     width: 30px;
     height: 30px;
     font-size: 20px;
-    color: #fff;
-    background-color: gray;
+    color: var(--bg-color-white);
+    background-color: var(--text-sub-color);
     border-radius: 20px;
 `
 
@@ -67,7 +67,6 @@ export const CommentButton = styled.button`
 export const CommentBody = styled.p`
 	font-weight: 400;	
 	font-size: 13px;
-	color: #4f4f4f;
 `;
 
 export const CommentWriter = styled.h5`
@@ -83,10 +82,10 @@ export const EditOutlinedStyled = styled(EditOutlined)`
 	justify-content: center;
 	align-items: center;
 	height: 30px;
-	color: #bdbdbd;
+	color: var(--text-sub-color);
 	border-radius: 5px;
     &:hover{
-        background-color: #E8F0FE;
+        background-color: var(--hover-bg-color);
     }
 `;
 
@@ -97,16 +96,16 @@ export const CloseOutlinedStyled = styled(CloseOutlined)`
 	align-items: center;
 	width: 30px;
 	height: 30px;
-	color: #bdbdbd;
+	color: var(--text-sub-color);
 	border-radius: 5px;
     &:hover{
-        background-color: #E8F0FE;
+        background-color: var(--hover-bg-color);
     }
 `;
 
 export const CommentFooter = styled.p`
 	font-size: 11px;
-	color: #979797;
+	color: var(--text-sub-color);;
 `;
 
 export const Space = styled.div<{ hight: number }>`

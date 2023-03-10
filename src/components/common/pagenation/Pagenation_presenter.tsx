@@ -25,7 +25,7 @@ const Pagenation_presenter = (props: Props) => {
 					onClick={props.onClickPrev}
 					style={{
 						padding: '5px',
-						color: props.startPage === 1 ? '#BDBDBD' : '#5f6368',
+						color: props.startPage === 1 ? 'var(--text-sub-color)' : 'var(--text-sub-color);',
 						fontSize: "24px"
 					}}
 				/>
@@ -55,8 +55,8 @@ const Pagenation_presenter = (props: Props) => {
 						padding: '5px',
 						color:
 							props.startPage + props.pageNumber > props.lastPage
-								? '#BDBDBD'
-								: '#5f6368',
+								? 'var(--text-sub-color)'
+								: 'var(--text-sub-color);',
 						fontSize: "24px"
 					}}
 					disabled={props.startPage + props.pageNumber > props.lastPage}

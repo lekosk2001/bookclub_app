@@ -1,7 +1,7 @@
 import * as S from './BoardCommentList_styles';
 import React, { useState } from 'react';
-import { dateFormat } from '@/common/utils';
 import { IBoardComment } from '@/common/types/generated/types';
+import dayjs from 'dayjs';
 
 interface BoardCommentList_item_Props {
 	onClickDeleteBoardComment: (arg0: string) => void;
@@ -34,7 +34,7 @@ const BoardCommentList_item = (props: BoardCommentList_item_Props) => {
 
 						<S.CommentBody>{comment.contents}</S.CommentBody>
 						<S.CommentFooter>
-							{dateFormat(comment.createdAt)}
+							{dayjs(comment.createdAt).format("YYYY.MM.DD HH:mm")}
 						</S.CommentFooter>
 					</S.CommentContents>
 				</S.CommentBox>

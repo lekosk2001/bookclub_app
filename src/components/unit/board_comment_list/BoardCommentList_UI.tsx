@@ -6,7 +6,6 @@ import BoardCommentList_item from './BoardCommentList_item';
 import { DELETE_BOARDS_COMMNET, FETCH_BOARD_COMMENT } from './BoardCommentList_queries';
 import * as S from './BoardCommentList_styles';
 
-
 const BoardCommentList_UI = () => {
     const rourer = useRouter();
     const boardId = String(rourer.query.boardId);

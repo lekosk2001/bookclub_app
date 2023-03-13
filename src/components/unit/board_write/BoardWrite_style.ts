@@ -34,13 +34,16 @@ export const InputStyled = styled.input`
 `
 
 export const TextAreaStyled = styled.textarea`
-    font-family: initial;
+    color: var(--text-color-main);
     height: 300px;
     border: 0px;
     font-size: 15px;
     padding: 20px;
     border-radius :0px;    
-    border: 1px solid var(--border-color);    
+    border: 1px solid var(--border-color);
+	&::placeholder {
+		font-size: 15px;
+	}
 `
 
 
@@ -50,7 +53,11 @@ export const InputTitle = styled.input`
     padding: 0px;
     border: 0px;
     border-bottom: 1px solid var(--border-color);
-    border-radius: 0px;
+    border-radius: 0px;        
+    &::placeholder{
+        font-weight: 800;
+        font-size: 36px;
+    }
 `
 
 

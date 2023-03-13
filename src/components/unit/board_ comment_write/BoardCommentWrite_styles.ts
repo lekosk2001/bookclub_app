@@ -33,9 +33,6 @@ export const Input = styled.input`
 	padding-left: 10px;
 	font-size: 13px;
 	font-weight: 500;
-	&::placeholder {
-		color: var(--text-color-sub);
-	}
 `;
 
 export const RateStars = styled.div`
@@ -46,14 +43,16 @@ export const RateStars = styled.div`
 export const CommetWriteBox = styled.textarea`
 	border: 1px solid var(--border-color);
 	width: 100%;
+	height: 100px;
 	padding: 15px;
 	font-weight: 400;
 	line-height: 20px;
 	font-size: 13px;
 	text-align: start;
 	resize: none;
+	color: var(--text-color-main);
 	&::placeholder {
-		color:  var(--text-color-sub);
+		font-size: 13px;
 	}
 	border-bottom: 0px;
 `;

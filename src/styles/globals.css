@@ -42,6 +42,17 @@ a {
 
 p{color: var(--text-color-main);}
 
+input::placeholder{
+    color: var(--text-color-sub-week);
+    font-weight: 400;
+    font-size: 13px;
+}
+textarea::placeholder{
+    color: var(--text-color-sub-week);
+    font-weight: 400;
+    font-size: 13px;
+}
+
 
 @media (prefers-color-scheme: dark) {
     html {

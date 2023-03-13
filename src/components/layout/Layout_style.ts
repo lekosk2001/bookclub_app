@@ -171,5 +171,5 @@ export const Footer = styled.footer`
 `
 export const FooterText = styled.p`
     font-size: 11px;
-    color: var(--text-color-gray);
+    color: var(--text-color-sub);
 `
